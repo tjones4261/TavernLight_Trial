@@ -1,0 +1,15 @@
+Q7
+const int LEFT_VALUE = -1;
+const float Y_POS_MAX = 10;
+const float Y_POS_MIN = 0;
+const float X_POS_START = 0;
+
+jump_node{
+	// every tick/frame
+	postion.x -= LEFT_VALUE * speed * deltaTime;
+
+	if(clicked){
+		position.x = X_POS_START;
+		position.y = Random(min: Y_POS_MIN, max: Y_POS_MAX);
+	}
+}
