@@ -1,0 +1,17 @@
+Q5 - Psuedocode
+----------------------------------------------
+bigTwisterPostions = {-2, 0}, {-1, 0}, {1, 0}, {2, 0}, {-1, 1}, {1, 1}, {-1, -1}, {1, -1}; // {x, y} relative to player 
+littleTwisterPositions = {0, 2}, {1.5, .5}, {0, .5}, { -1.5, .5}, {1.5, -.5}, {0, -.5}, {1.5, -.5}, {0, -2}; // {x,y} relative to the player casting
+
+public float range = 2; // meters, tiles, etc
+public float castTime = 4; // seconds
+
+function beginCast(){
+	foreach position in bigTwisterPositions
+		Instantiate BigTwister sprite
+		Set duration to castTime
+
+	foreach position in littleTwisterPositions
+		Instantiate LittleTwister sprites
+		set duration to castTime * .333f // each little twister repeats animation 3 times
+}
